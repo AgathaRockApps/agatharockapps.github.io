@@ -10,17 +10,20 @@ body {
   background-color: #0a0a0a;
   color: #e0ffe0;
   line-height: 1.6;
+  padding-top: 80px;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  margin-top: 20vh;
 }
 
 /* Navbar */
 .navbar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: #111;
@@ -33,10 +36,6 @@ body {
   z-index: 1000;
 }
 
-body {
-  padding-top: 80px;
-}
-
 .logo {
   color: #00ff88;
   font-size: 1.5rem;
@@ -46,6 +45,7 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
@@ -61,11 +61,10 @@ body {
 
 /* Hero */
 .hero {
-  background: 
-    linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-    url('images:business-meeting.jpg..jpeg) center/cover no-repeat;
+  background-color: #111;
   padding: 6rem 2rem;
   text-align: center;
+  margin-top: 20vh;
 }
 
 .hero-content h1 {
@@ -96,6 +95,10 @@ body {
 }
 
 /* About Section */
+.about-details {
+  margin-top: 20vh;
+}
+
 .about-details h2, .values, .team h3 {
   margin-top: 2rem;
   color: #00ff88;
@@ -121,6 +124,10 @@ body {
 }
 
 /* Portfolio */
+.portfolio-section {
+  margin-top: 20vh;
+}
+
 .portfolio-section .project {
   background: #111;
   margin-bottom: 2rem;
@@ -130,6 +137,10 @@ body {
 }
 
 /* Blog */
+.blog-section {
+  margin-top: 20vh;
+}
+
 .blog-post {
   background: #111;
   margin-bottom: 2rem;
@@ -150,6 +161,10 @@ body {
 }
 
 /* Contact */
+.contact-section {
+  margin-top: 20vh;
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
@@ -176,6 +191,7 @@ footer {
   padding: 1rem;
   color: #555;
   font-size: 0.875rem;
+  margin-top: 20vh;
 }
 
 /* Responsive */
@@ -183,6 +199,7 @@ footer {
   .nav-links {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   .team {
