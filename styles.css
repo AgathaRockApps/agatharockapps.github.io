@@ -19,6 +19,7 @@ body {
   margin: 0 auto;
   padding: 2rem;
   margin-top: 20vh;
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* Navbar */
@@ -35,12 +36,14 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .logo {
   color: #00ff88;
   font-size: 1.5rem;
   font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .logo sup {
@@ -54,6 +57,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .nav-links a {
@@ -72,6 +76,7 @@ body {
   padding: 6rem 2rem;
   text-align: center;
   margin-top: 20vh;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .hero-content h1 {
@@ -104,6 +109,7 @@ body {
 /* About Section */
 .about-details {
   margin-top: 20vh;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .about-details h2, .values, .team h3 {
@@ -137,6 +143,7 @@ body {
 /* Portfolio */
 .portfolio-section {
   margin-top: 20vh;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .portfolio-section .project {
@@ -151,6 +158,7 @@ body {
 /* Blog */
 .blog-section {
   margin-top: 20vh;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .blog-post {
@@ -176,6 +184,7 @@ body {
 /* Contact */
 .contact-section {
   margin-top: 20vh;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .contact-form {
@@ -194,7 +203,7 @@ body {
   padding: 1.25rem;
   border: none;
   border-radius: 5px;
-  font-family: inherit;
+  font-family: 'Orbitron', sans-serif;
   background-color: #222;
   color: #ffffff;
   font-size: 1.1rem;
@@ -203,6 +212,7 @@ body {
 .contact-info {
   margin-top: 2rem;
   color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* Footer */
@@ -213,6 +223,7 @@ footer {
   color: #aaaaaa;
   font-size: 0.875rem;
   margin-top: 20vh;
+  font-family: 'Orbitron', sans-serif;
 }
 
 /* Responsive */
