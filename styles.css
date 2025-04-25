@@ -43,6 +43,12 @@ body {
   font-weight: bold;
 }
 
+.logo sup {
+  color: #ffffff;
+  font-size: 0.6em;
+  vertical-align: super;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
