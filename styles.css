@@ -63,7 +63,7 @@ body {
 .hero {
   background: 
     linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-    url('') center/cover no-repeat;
+    url('images:business-meeting.jpg..jpeg) center/cover no-repeat;
   padding: 6rem 2rem;
   text-align: center;
 }
