@@ -1,37 +1,37 @@
-:root {
-  --black: #0d0d0d;
-  --green: #00ff88;
-  --gray: #1a1a1a;
-  --text-light: #e0e0e0;
-}
-
+/* Reset and Base */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Orbitron', sans-serif;
-  background-color: var(--black);
-  color: var(--text-light);
+  background-color: #0a0a0a;
+  color: #e0ffe0;
   line-height: 1.6;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--gray);
+  background-color: #111;
   padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 999;
+  box-shadow: 0 2px 10px rgba(0, 255, 0, 0.1);
 }
 
 .logo {
+  color: #00ff88;
   font-size: 1.5rem;
-  color: var(--green);
+  font-weight: bold;
 }
 
 .nav-links {
@@ -41,98 +41,154 @@ body {
 }
 
 .nav-links a {
-  color: var(--text-light);
+  color: #e0ffe0;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: var(--green);
+  color: #00ff88;
 }
 
+/* Hero */
 .hero {
-  height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1535223289827-42f1e9919769') center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: 
+    linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+    url('images/business-meeting.jpg') center/cover no-repeat;
+  padding: 6rem 2rem;
   text-align: center;
-  padding: 0 2rem;
 }
 
-.hero-content {
-  max-width: 800px;
-}
-
-.hero h1 {
+.hero-content h1 {
   font-size: 3rem;
-  color: var(--green);
   margin-bottom: 1rem;
+  color: #00ff88;
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+.hero-content p {
+  font-size: 1.25rem;
+  color: #c8f7c5;
 }
 
 .cta-button {
   display: inline-block;
-  background-color: var(--green);
-  color: var(--black);
-  padding: 0.75rem 1.5rem;
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background-color: #00ff88;
+  color: #000;
+  text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
-  transition: background 0.3s ease;
-  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-  background-color: #00e676;
+  background-color: #00cc6a;
 }
 
-.about {
-  padding: 4rem 2rem;
-  background-color: var(--gray);
-  text-align: center;
+/* About Section */
+.about-details h2, .values, .team h3 {
+  margin-top: 2rem;
+  color: #00ff88;
 }
 
-.about h2 {
-  color: var(--green);
-  font-size: 2rem;
+.values {
+  list-style: disc;
+  margin-left: 2rem;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.team-member {
+  flex: 1 1 200px;
+  background: #111;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Portfolio */
+.portfolio-section .project {
+  background: #111;
   margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
 }
 
-.services {
+/* Blog */
+.blog-post {
+  background: #111;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-left: 5px solid #00ff88;
+}
+
+.blog-post .meta {
+  color: #999;
+  font-size: 0.875rem;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #00ff88;
+  text-decoration: underline;
+}
+
+/* Contact */
+.contact-form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
+  gap: 1.5rem;
 }
 
-.service-box {
-  background-color: var(--black);
-  border: 1px solid var(--green);
-  border-radius: 10px;
-  padding: 2rem;
-  transition: transform 0.3s ease;
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
 }
 
-.service-box:hover {
-  transform: scale(1.03);
+.contact-info {
+  margin-top: 2rem;
+  color: #aaa;
 }
 
+/* Footer */
 footer {
+  background-color: #111;
   text-align: center;
   padding: 1rem;
-  background-color: var(--gray);
-  color: var(--text-light);
-  font-size: 0.9rem;
+  color: #555;
+  font-size: 0.875rem;
 }
 
-@media (min-width: 768px) {
-  .services {
-    flex-direction: row;
-    justify-content: space-between;
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team {
+    flex-direction: column;
+  }
+
+  .hero-content h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
   }
 }
