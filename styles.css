@@ -236,6 +236,12 @@ footer {
     width: 100%;
   }
 
+  .logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
   .team {
     flex-direction: column;
   }
