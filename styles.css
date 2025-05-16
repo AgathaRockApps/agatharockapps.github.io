@@ -72,7 +72,9 @@ header {
 /* Main Content */
 main {
   padding: 4rem;
-  padding-bottom: 25rem;
+  font-size: 18px;
+  line-height: 2.5rem;
+  
 }
 
 #footer {
@@ -97,18 +99,4 @@ main {
   text-decoration: none; /* optional, removes underline */
 }
 
-
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
-}
-.image-grid img {
-  width: 100%;
-  height: 20%;
-  display: block;
-  object-fit: cover;
-  border-radius: 4px; /* optional, for style */
-}
 
