@@ -6,10 +6,11 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   transition: background-color 0.3s, color 0.3s;
   padding: 0;
   margin: 0;
+  
 }
 
 /* Light (Day) Mode */
@@ -29,9 +30,10 @@ header {
   display: flex;
   align-items: center;
   padding: 1rem;
-  background-color: inherit;
-  position: relative;
+  background-color: rgb(16, 130, 168);
+  position: fixed;
   z-index: 10;
+  width: 100%;
 }
 
 .logo {
@@ -69,5 +71,19 @@ header {
 
 /* Main Content */
 main {
-  padding: 2rem;
+  padding: 10rem;
+  
+}
+
+.footer {
+  display: inline-block;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgb(16, 130, 168);
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  color: blue;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12px;
 }
