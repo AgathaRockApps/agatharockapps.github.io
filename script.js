@@ -1,42 +1,22 @@
-// DOM Elements
-const navToggle = document.querySelector('.nav-toggle');
-const navMenu = document.querySelector('.nav-menu');
-const themeToggle = document.querySelector('.theme-toggle');
-const body = document.body;
+// === Theme Handling ===
+function toggleTheme() {
+  const body = document.body;
+  const currentTheme = body.classList.contains('dark') ? 'dark' : 'light';
+  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-// Toggle navigation menu (hamburger)
-navToggle.addEventListener('click', () => {
-  const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
-  navToggle.setAttribute('aria-expanded', !expanded);
-  navMenu.classList.toggle('active');
-});
+  body.classList.remove(currentTheme);
+  body.classList.add(newTheme);
+  localStorage.setItem('theme', newTheme);
+}
 
-// Close nav menu if clicking outside or on a link
-document.addEventListener('click', (event) => {
-  if (
-    !navMenu.contains(event.target) &&
-    !navToggle.contains(event.target) &&
-    navMenu.classList.contains('active')
-  ) {
-    navMenu.classList.remove('active');
-    navToggle.setAttribute('aria-expanded', false);
-  }
-});
+// === Sidebar Toggle ===
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('hidden');
+}
 
-// Toggle day/night theme and save preference
-themeToggle.addEventListener('click', () => {
-  const isNight = body.classList.toggle('night-mode');
-  localStorage.setItem('theme', isNight ? 'night' : 'day');
-  themeToggle.textContent = isNight ? '☀️' : '🌙';
-});
-
-// Load saved theme preference on page load
-window.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'night') {
-    body.classList.add('night-mode');
-    themeToggle.textContent = '☀️';
-  } else {
-    themeToggle.textContent = '🌙';
-  }
-});
+// === Load Theme on Page Load ===
+window.onload = function () {
+  const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to night mode
+  document.body.classList.add(savedTheme);
+};
