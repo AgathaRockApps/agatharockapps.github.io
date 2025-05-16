@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   transition: background-color 0.3s, color 0.3s;
   padding: 0;
   margin: 0;
@@ -75,15 +75,23 @@ main {
   
 }
 
-.footer {
-  display: inline-block;
+#footer {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 1rem;
+  gap: 20px;
+  padding: 5rem;
   background-color: rgb(16, 130, 168);
-  position: relative;
+  position: absolute
+  bottom 0%;
   z-index: 10;
   width: 100%;
-  color: blue;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 12px;
+  font-size: 16px;
+  color: black;
+}
+
+#footer,
+#footer a {
+  color: black !important;
+  text-decoration: none; /* optional, removes underline */
 }
