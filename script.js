@@ -20,3 +20,4 @@ window.onload = function () {
   const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to night mode
   document.body.classList.add(savedTheme);
 };
+
