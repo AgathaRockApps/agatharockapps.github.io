@@ -2,43 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Your Business</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agatha Rock Built - Contact</title>
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Your Business</h1>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <button id="modeToggle">☀️</button>
-    </nav>
+  <header class="fixed-header" role="banner">
+    <div class="container">
+      <h1 class="logo">Agatha Rock Built</h1>
+      <button id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu" class="nav-toggle">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="nav-menu" class="nav-menu" aria-label="Primary navigation" hidden>
+        <ul>
+          <li><a href="index.html" tabindex="0">Home</a></li>
+          <li><a href="about.html" tabindex="0">About</a></li>
+          <li><a href="contact.html" tabindex="0">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle day and night mode" class="theme-toggle">☀️</button>
+    </div>
   </header>
+        <h2>Contact Us</h2>
+		<p>agatharockinc@gmail.com</p>
+<!--
+  <main id="main-content" tabindex="-1">
+    <section aria-label="Contact Agatha Rock Built">
+      <h2>Contact Us</h2>
+      <form action="#" method="post" aria-describedby="contact-desc">
+        <p id="contact-desc">Fill out the form below or email us directly at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required aria-required="true" />
 
-  <main class="contact-page">
-    <h2>Contact Us</h2>
-    <form class="contact-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required aria-required="true" />
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Send</button>
-    </form>
+        <button type="submit">Send Message</button>
+      </form>
+	-->
+      <section aria-label="Business hours">
+    <!--    <h3>Business Hours</h3>
+        <p>Monday - Friday: 9:00 AM – 3:00 PM</p> -->
+      </section>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Your Business. All rights reserved.</p>
+  <footer role="contentinfo">
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+     <!--   <li><a href="sample.html">Sample Website</a></li> -->
+        <li><a href="services.html">Services</a></li>
+     <!--   <li><a href="portal.html">Portal</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="faq.html">FAQ</a></li> -->
+      </ul>
+    </nav>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

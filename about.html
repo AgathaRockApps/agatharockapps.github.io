@@ -2,35 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About - Your Business</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agatha Rock Built - About</title>
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <h1 class="logo">Your Business</h1>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <button id="modeToggle">☀️</button>
-    </nav>
+  <header class="fixed-header" role="banner">
+    <div class="container">
+      <h1 class="logo">Agatha Rock Built</h1>
+      <button id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu" class="nav-toggle">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="nav-menu" class="nav-menu" aria-label="Primary navigation" hidden>
+        <ul>
+          <li><a href="index.html" tabindex="0">Home</a></li>
+          <li><a href="about.html" tabindex="0">About</a></li>
+          <li><a href="contact.html" tabindex="0">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle day and night mode" class="theme-toggle">☀️</button>
+    </div>
   </header>
 
-  <main>
-    <section class="about-section">
-      <h2>About Us</h2>
-      <p>We provide full-service digital infrastructure solutions for businesses. From professional websites to mobile apps and integrated POS systems, we are committed to helping your business scale efficiently and securely.</p>
-      <p>Our mission is to deliver practical, scalable, and modern technology tools that empower entrepreneurs and organizations to thrive in the digital era.</p>
+  <main id="main-content" tabindex="-1">
+    <section aria-label="About Agatha Rock Built core values">
+      <h2>Our Core Values</h2>
+      <p>
+        At Agatha Rock Built, honesty and integrity are the bedrock of every decision we make. We understand that financial health is vital—
+        a business in the red cannot stand for long. Yet, beyond numbers and profit, we build relationships rooted in passion, purpose, and love.
+      </p>
+      <p>
+        Our mission is to help you grow your vision and business with heart. Profit is a tool, not the master. Life, love, and passion for your calling
+        drive everything we do.
+      </p>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Your Business. All rights reserved.</p>
+  <footer role="contentinfo">
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+     <!--   <li><a href="contact.html">Contact</a></li> -->
+      <!--  <li><a href="sample.html">Sample Website</a></li> -->
+        <li><a href="services.html">Services</a></li>
+   <!--     <li><a href="portal.html">Portal</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="faq.html">FAQ</a></li> -->
+      </ul>
+    </nav>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

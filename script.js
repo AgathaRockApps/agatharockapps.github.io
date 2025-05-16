@@ -1,38 +1,42 @@
-// Get the toggle button and body
-const modeToggle = document.getElementById('modeToggle');
+// DOM Elements
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+const themeToggle = document.querySelector('.theme-toggle');
 const body = document.body;
 
-// Load saved mode on page load
-const savedMode = localStorage.getItem('mode');
-if (savedMode === 'dark') {
-  body.classList.add('dark');
-  modeToggle.textContent = '🌙';
-} else {
-  modeToggle.textContent = '☀️';
-}
+// Toggle navigation menu (hamburger)
+navToggle.addEventListener('click', () => {
+  const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+  navToggle.setAttribute('aria-expanded', !expanded);
+  navMenu.classList.toggle('active');
+});
 
-// Dark/Light Mode Toggle
-modeToggle.addEventListener('click', () => {
-  body.classList.toggle('dark');
-  if (body.classList.contains('dark')) {
-    modeToggle.textContent = '🌙';
-    localStorage.setItem('mode', 'dark'); // Save preference
-  } else {
-    modeToggle.textContent = '☀️';
-    localStorage.setItem('mode', 'light'); // Save preference
+// Close nav menu if clicking outside or on a link
+document.addEventListener('click', (event) => {
+  if (
+    !navMenu.contains(event.target) &&
+    !navToggle.contains(event.target) &&
+    navMenu.classList.contains('active')
+  ) {
+    navMenu.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', false);
   }
 });
 
-// Smooth scroll for nav links (if linking to sections on same page)
-document.querySelectorAll('.nav-links a').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const href = this.getAttribute('href');
-    if (href.startsWith('#')) {
-      e.preventDefault();
-      const target = document.querySelector(href);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  });
+// Toggle day/night theme and save preference
+themeToggle.addEventListener('click', () => {
+  const isNight = body.classList.toggle('night-mode');
+  localStorage.setItem('theme', isNight ? 'night' : 'day');
+  themeToggle.textContent = isNight ? '☀️' : '🌙';
+});
+
+// Load saved theme preference on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'night') {
+    body.classList.add('night-mode');
+    themeToggle.textContent = '☀️';
+  } else {
+    themeToggle.textContent = '🌙';
+  }
 });

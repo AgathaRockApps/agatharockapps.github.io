@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Home - Agatha Rock Inc</title>
-	<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agatha Rock Built - Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
-
 <body>
-	<header>
-		<nav class="navbar">
-			<h1 class="logo">Agatha Rock Apps</h1>
-			<ul class="nav-links">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-			<button id="modeToggle">☀️</button>
-		</nav>
-	</header>
+  <header class="fixed-header" role="banner">
+    <div class="container">
+      <h1 class="logo">Agatha Rock Built</h1>
+	  
+      <button id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu" class="nav-toggle">
+        <span class="hamburger"></span>
+      </button>
+      <nav id="nav-menu" class="nav-menu" aria-label="Primary navigation" hidden>
+        <ul>
+          <li><a href="index.html" tabindex="0">Home</a></li>
+          <li><a href="about.html" tabindex="0">About</a></li>
+          <li><a href="contact.html" tabindex="0">Contact</a></li>
+        </ul>
+      </nav>
+	
+      <button id="theme-toggle" aria-label="Toggle day and night mode" class="theme-toggle">☀️</button>
+    </div>
+  </header>
 
-	<main>
-		<section class="grid">
-			<div class="grid-item"><a href="services.html"><img src="dev.avif" alt="Website Management" />
-					<p>Building Tailor Made Websites</p>
-				</a></div>
-			<div class="grid-item"><a href="services.html"><img src="clover.png" alt="Service 2" />
-					<p>Payment Processing Services</p>
-				</a></div>
-			<!-- <div class="grid-item"><a href="services.html"><img src="images/service3.jpg" alt="Service 3" /><p>Service 3</p></a></div> -->
+  <main id="main-content" tabindex="-1">
+    <section class="hero" aria-label="Introduction to Agatha Rock Built">
+      <h2>Helping Businesses Scale with Precision and Power</h2>
+      <p>
+        We help businesses grow by solving challenges with POS systems, streamlining operations for efficiency and inventory management, 
+        and building your online presence. Our dedicated consultant team partners with you every step of the way, celebrating your success as our own.
+      </p>
+    </section>
+
+    <section class="image-grid" aria-label="Featured service previews">
+      <!-- Placeholder for 5 images linking to services/products -->
+      <div class="grid-item"><a href="#"><img src="dev.avif" alt="1" /></a></div>
+      <div class="grid-item"><a href="#"><img src="clover.png" alt="Service 2" /></a></div>
+     <!-- <div class="grid-item"><a href="#"><img src="placeholder3.jpg" alt="Service 3" /></a></div>
+      <div class="grid-item"><a href="#"><img src="placeholder4.jpg" alt="Service 4" /></a></div>
+      <div class="grid-item"><a href="#"><img src="placeholder5.jpg" alt="Service 5" /></a></div> -->
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Agatha Rock Apps. All rights reserved.</p>
+  <footer role="contentinfo">
+    <nav aria-label="Footer navigation">
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+    <!--    <li><a href="contact.html">Contact</a></li> -->
+       <!-- <li><a href="software.html">Sample Website</a></li> -->
+        <li><a href="services.html">Services</a></li>
+     <!--   <li><a href="payment.html">Portal</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="security.html">Resources</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="faq.html">FAQ</a></li> -->
+      </ul>
+    </nav>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
