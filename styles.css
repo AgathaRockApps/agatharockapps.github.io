@@ -21,8 +21,8 @@ body.light {
 
 /* Dark (Night) Mode */
 body.dark {
-  background-color: #121212;
-  color: #f0f0f0;
+  background-color: rgb(16, 130, 168);
+  color: rgb(33, 32, 32);
 }
 
 /* Header & Logo */
@@ -72,30 +72,30 @@ header {
 /* Main Content */
 main {
   padding: 4rem;
-  font-size: 18px;
-  line-height: 2.5rem;
+  font-size: 32px;
+  line-height: 5rem;
   
 }
 
 #footer {
-  display: block;
+  display: flexbox;
   justify-content: center;
   align-items: center;
   gap: 20px;
   padding: 1rem;
+  padding-left: 10rem;
   background-color: rgb(16, 130, 168);
   position: absolute
   bottom 0%;
   z-index: 10;
   width: 100%;
-  font-size: 16px;
+  font-size: 24px;
   color: black;
- 
 }
 
 #footer,
 #footer a {
-  color: black !important;
+  color: rgb(45, 44, 44) !important;
   text-decoration: none; /* optional, removes underline */
 }
 
